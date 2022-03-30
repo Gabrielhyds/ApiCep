@@ -79,6 +79,8 @@ class _MyHomePageState extends State<MyHomePage> {
       _bairro.text = "";
       _cidade.text = "";
       _estado.text = "";
+      _rendaMensal.text = "";
+      _limiteCredito.text = "";
     });
   }
 
