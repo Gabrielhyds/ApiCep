@@ -49,17 +49,17 @@ class _MyHomePageState extends State<MyHomePage> {
       Map<String, dynamic> retorno = json.decode(response.body);
 
       print(retorno["logradouro"].toString());
-      print(retorno["complemento"].toString());
       print(retorno["bairro"].toString());
       print(retorno["localidade"].toString());
       print(retorno["uf"].toString());
+      print(retorno["complemento"].toString());
 
       setState(() {
         _rua.text = retorno["logradouro"].toString();
-        _complemento.text = retorno["complemento"].toString();
         _bairro.text = retorno["bairro"].toString();
         _cidade.text = retorno["localidade"].toString();
         _estado.text = retorno["uf"].toString();
+        _complemento.text = retorno["complemento"].toString();
       });
     }
   }
@@ -122,10 +122,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
                       if (cep != 0) {
                         _rua.text = rua;
-                        _complemento.text = complemento;
                         _bairro.text = bairro;
                         _cidade.text = cidade;
                         _estado.text = estado;
+                        _complemento.text = complemento;
                       }
                       ;
                     },
