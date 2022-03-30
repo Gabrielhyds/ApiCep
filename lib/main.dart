@@ -154,6 +154,50 @@ class _MyHomePageState extends State<MyHomePage> {
               Padding(
                 padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
                 child: TextField(
+                    maxLength: 11,
+                    enabled: false,
+                    controller: _limiteCredito,
+                    decoration: InputDecoration(
+                      icon: Icon(Icons.credit_card),
+                      border: OutlineInputBorder(),
+                      labelText: "Limite de crédito",
+                    )),
+              ),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.fromLTRB(20, 0, 5, 20),
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.black,
+                      primary: Colors.white,
+                      padding: EdgeInsets.all(20.0),
+                      textStyle: TextStyle(fontSize: 17),
+                    ),
+                    onPressed: () {
+                      _gravar();
+                    },
+                    child: Text('Cadastrar'),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 0, 20, 20),
+                  child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.black,
+                      primary: Colors.white,
+                      padding: EdgeInsets.all(20.0),
+                      textStyle: TextStyle(fontSize: 17),
+                    ),
+                    onPressed: () {
+                      _limpar();
+                    },
+                    child: Text("Limpar"),
+                  ),
+                ),
+              ]),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                child: TextField(
                     maxLength: 50,
                     enabled: false,
                     controller: _rua,
@@ -205,51 +249,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       border: OutlineInputBorder(),
                       labelText: "Complemento",
                     )),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
-                child: TextField(
-                    maxLength: 11,
-                    enabled: false,
-                    controller: _limiteCredito,
-                    decoration: InputDecoration(
-                      icon: Icon(Icons.credit_card),
-                      border: OutlineInputBorder(),
-                      labelText: "Limite de crédito",
-                    )),
-              ),
-              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.fromLTRB(20, 0, 5, 20),
-                  child: TextButton(
-                    style: TextButton.styleFrom(
-                      backgroundColor: Colors.black,
-                      primary: Colors.white,
-                      padding: EdgeInsets.all(20.0),
-                      textStyle: TextStyle(fontSize: 17),
-                    ),
-                    onPressed: () {
-                      _gravar();
-                    },
-                    child: Text('Cadastrar'),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(5, 0, 20, 20),
-                  child: TextButton(
-                    style: TextButton.styleFrom(
-                      backgroundColor: Colors.black,
-                      primary: Colors.white,
-                      padding: EdgeInsets.all(20.0),
-                      textStyle: TextStyle(fontSize: 17),
-                    ),
-                    onPressed: () {
-                      _limpar();
-                    },
-                    child: Text("Limpar"),
-                  ),
-                ),
-              ]),
+              )
             ],
           ),
         ),
