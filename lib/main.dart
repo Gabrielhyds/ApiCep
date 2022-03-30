@@ -143,18 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     controller: _rua,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: "Digite a Rua",
-                    )),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
-                child: TextField(
-                    maxLength: 50,
-                    enabled: false,
-                    controller: _complemento,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: "Digite o Complemento",
+                      labelText: "Rua",
                     )),
               ),
               Padding(
@@ -165,7 +154,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     controller: _bairro,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: "Digite o Bairro",
+                      labelText: "Bairro",
                     )),
               ),
               Padding(
@@ -176,7 +165,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     controller: _cidade,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: "Digite a Cidade",
+                      labelText: "Cidade",
                     )),
               ),
               Padding(
@@ -187,7 +176,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     controller: _estado,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: "Digite o Estado",
+                      labelText: "Estado",
+                    )),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                child: TextField(
+                    maxLength: 50,
+                    enabled: false,
+                    controller: _complemento,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: "Complemento",
                     )),
               ),
               Padding(
