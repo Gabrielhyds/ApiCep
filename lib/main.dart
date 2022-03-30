@@ -176,7 +176,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     onPressed: () {
                       _gravar();
                     },
-                    child: Text('Cadastrar'),
+                    child: Text('Procurar'),
                   ),
                 ),
                 Padding(
