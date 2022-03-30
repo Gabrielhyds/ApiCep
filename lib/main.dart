@@ -138,6 +138,22 @@ class _MyHomePageState extends State<MyHomePage> {
               Padding(
                 padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
                 child: TextField(
+                    maxLength: 11,
+                    controller: _rendaMensal,
+                    // Conforme a renda mensal for mudando o limite de crédito(30%) acompanha.
+                    onChanged: (inputValue) {
+                      double? limite = double.tryParse(_rendaMensal.text);
+                      if (limite != null) _limiteCredito.text = (limite * 0.3).toString();
+                    },
+                    decoration: InputDecoration(
+                      icon: Icon(Icons.money),
+                      border: OutlineInputBorder(),
+                      labelText: "Digite a Renda Mensal",
+                    )),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                child: TextField(
                     maxLength: 50,
                     enabled: false,
                     controller: _rua,
@@ -188,22 +204,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: "Complemento",
-                    )),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
-                child: TextField(
-                    maxLength: 11,
-                    controller: _rendaMensal,
-                    // Conforme a renda mensal for mudando o limite de crédito(30%) acompanha.
-                    onChanged: (inputValue) {
-                      double? limite = double.tryParse(_rendaMensal.text);
-                      if (limite != null) _limiteCredito.text = (limite * 0.3).toString();
-                    },
-                    decoration: InputDecoration(
-                      icon: Icon(Icons.money),
-                      border: OutlineInputBorder(),
-                      labelText: "Digite a Renda Mensal",
                     )),
               ),
               Padding(
