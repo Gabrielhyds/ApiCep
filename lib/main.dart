@@ -168,7 +168,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: EdgeInsets.fromLTRB(20, 0, 5, 20),
                   child: TextButton(
                     style: TextButton.styleFrom(
-                      backgroundColor: Colors.black,
+                      backgroundColor: Colors.green,
                       primary: Colors.white,
                       padding: EdgeInsets.all(20.0),
                       textStyle: TextStyle(fontSize: 17),
@@ -183,7 +183,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: EdgeInsets.fromLTRB(5, 0, 20, 20),
                   child: TextButton(
                     style: TextButton.styleFrom(
-                      backgroundColor: Colors.black,
+                      backgroundColor: Colors.red,
                       primary: Colors.white,
                       padding: EdgeInsets.all(20.0),
                       textStyle: TextStyle(fontSize: 17),
